@@ -140,7 +140,7 @@ def cla_show():
     1. Sort Table by Number of Moves
     2. Sort Table by Total Games
     3. Sort Table by Game Probability (W/B)
-    4. Sort Table by Game Probability (W/B)
+    4. Sort Table by Average Game Probability (W/B)
     5. Sort Table by Game Index
     6. Edit Name of row
     7. Add a PGN file to the table
