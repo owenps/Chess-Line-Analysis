@@ -88,13 +88,14 @@ def lichess_query(fen):
 
 def cla_create():
     games = []
+    name = ""
     # Fetch FENs
-    if cla_load(games):
+    if cla_load(games,name):
         # Create Table 
-        cla_build(games)
+        cla_build(games, name)
 
 
-def cla_build(games, new=True):
+def cla_build(games, name, new=True):
     d = {
       'Name' : [],
       'Moves' : [],
@@ -111,7 +112,7 @@ def cla_build(games, new=True):
             print("Calculating Game {}...".format(num))
         game_score, move_score, fen, moves = cla_calculate(game)
         info = opening_db[fen] if fen in opening_db else lichess_query(fen)
-        d['Name'].append(None)
+        d['Name'].append(name)
         d['Moves'].append(moves)
         
         d['Game Prob. (W)'].append(game_score[0])
@@ -172,10 +173,11 @@ def cla_show():
             print(data)
         elif ans == "7":
             games = []
+            name = ""
             # Fetch FENs
-            if cla_load(games):
+            if cla_load(games, name):
                 # Create Table 
-                cla_build(games,new=False)
+                cla_build(games,name,new=False)
                 print(data)
         elif ans == "8":
             cla_definitions()
@@ -183,10 +185,11 @@ def cla_show():
             break
 
 
-def cla_load(games):
+def cla_load(games,fn):
     fn = input("Enter a valid file in PGN format to load: ")
     try:
         with open(fn) as f:
+            max_moves = int(input("Set a max number of moves to analyze: "))
             game = pgn.read_game(f)
             while game:
                 game.board() # Check if valid, otherwise throws attribute error
@@ -197,6 +200,8 @@ def cla_load(games):
         print('The file "{}" was not found.'.format(fn))
     except AttributeError:
         print('Error reading "{}". Please submit a valid file that uses PGN format.'.format(fn))
+    except ValueError:
+        print('Invalid max_move parameter')
     return False
 
 def cla_import():
