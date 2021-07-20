@@ -13,7 +13,7 @@ If you enjoy the project and wish to show your support, leaving a ⭐ on the rep
 - Export a CLA table to a .CSV file
 - Import a .CSV CLA table to expand/edit the table. 
 - Assign names to PGNs for easier reference (E.g. "Stafford Gambit h3")
-- Configurable to analyze particular time controls or ratings. Visit the `settings.json` file to customize your experience. 
+- Configure the script to analyze particular time controls or set of ratings. Visit the `settings.json` file to customize your experience. 
 
 ## What Does It Not Do?
 
