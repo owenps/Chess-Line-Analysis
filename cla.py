@@ -59,10 +59,7 @@ def cla_calculate(game):
             total_games += candidate_move['white']+candidate_move['draws']+candidate_move['black']
             if candidate_move['uci'] == move.uci():
                 move_total = candidate_move['white']+candidate_move['draws']+candidate_move['black']
-        if move_total == 0:
-            game_inc = 1.0/(total_games+1) # Laplace smooting
-        else:
-            game_inc = move_total*1.0/total_games     
+        game_inc = 0.1/(total_games+1) if move_total == 0 else move_total*1.0/total_games    
         
         game_prob[i % 2] *= game_inc
         move_prob[i % 2].append(game_inc)       
