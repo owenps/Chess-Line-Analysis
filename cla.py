@@ -24,7 +24,7 @@ def cla_definitions():
     Name - This a user defined title to a particular game. This can help identify a unique PGN. Use option "6" to edit this name. 
     Moves - The total amount of moves made in the game
     Total Games - The number of games that have reached the same board position
-    Game Prob. - The probability of a particular player all the moves recorded in the game according to the Lichess opening explorer.
+    Game Prob. - The probability of a particular player playing each move recorded in the game's PGN according to the Lichess opening explorer.
     Avg Prob. - The average probability of each move being played in the game 
     PGN - Portable Game Notation (PGN) is a common digital notation for chess games
     (W) - Refers to the player playing with the White pieces
