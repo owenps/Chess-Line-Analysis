@@ -17,7 +17,7 @@ If you enjoy the project and wish to show your support, leaving a ⭐ on the rep
 
 ## What Does It Not Do?
 
-- Analyze different branches in a PGN as it only considers the mainline moves. Please consider breaking the PGN into multiple PGNs for each branch you wish to process. 
+- Analyze different branches in a PGN. Currently the script only considers the mainline moves. Please consider breaking the PGN into multiple PGNs for each branch you wish to process. 
 - Evaluate the positions with an engine. Please use the [Stockfish](https://stockfishchess.org/) or any publicly available chess engine.  
 - Give you recommendations on what to play. The program should guide you how to structure your study time. Do your own research (accompanied with an engine) to make sure you are comfortable playing a particular line. 
 
