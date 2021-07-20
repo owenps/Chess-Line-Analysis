@@ -15,7 +15,7 @@ If you enjoy the project and wish to show your support, leaving a ⭐ on the rep
 - Assign names to PGNs for easier reference (E.g. "Stafford Gambit h3")
 - Configure the script to analyze particular time controls or set of ratings. Visit the `settings.json` file to customize your experience. 
 
-## What Does It Not Do?
+## What Does It *Not* Do?
 
 - Analyze different branches in a PGN. Currently the script only considers the mainline moves. Please consider breaking the PGN into multiple PGNs for each branch you wish to process. 
 - Evaluate the positions with an engine. Please use the [Stockfish](https://stockfishchess.org/) or any publicly available chess engine.  
