@@ -2,7 +2,7 @@
 ![Python Badge](https://img.shields.io/badge/Python-007396?style=for-the-badge&labelColor=black&logo=Python&logoColor=white) 
 ![Lichess Badge](https://img.shields.io/badge/Lichess-FF6767?style=for-the-badge&labelColor=black&logo=Lichess&logoColor=white) 
 
-The Chess Line Analysis (CLA) Program is a chess tool to compare and analyze PGNs to help you make better use of your study time. The goal here is to outline particular PGNs which are the most likely to happen. The CLA program is built using Python and querys the [Lichess Opening-Explorer database](https://lichess.org/api#tag/Opening-Explorer) for its statistics. A big thank you to [u/Kael57](https://www.reddit.com/user/Kael57) for the idea for this project and the feedback throughout its development. 
+The Chess Line Analysis (CLA) Program is a chess tool to compare and analyze PGNs to help you make better use of your study time. The goal here is to outline particular games/lines which are statistically the most likely to happen. The CLA program is built using Python and querys the [Lichess Opening-Explorer database](https://lichess.org/api#tag/Opening-Explorer) for its statistics. A big thank you to [u/Kael57](https://www.reddit.com/user/Kael57) for the idea for this project and the feedback throughout its development. 
 
 If you enjoy the project and wish to show your support, leaving a ⭐ on the repository would really mean a lot!
 
