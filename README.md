@@ -22,9 +22,7 @@ If you enjoy the project and wish to show your support, leaving a ⭐ on the rep
 - Give you recommendations on what to play. The program should guide you how to structure your study time. Do your own research (accompanied with an engine) to make sure you are comfortable playing a particular line. 
 
 ## Executing the Script Yourself
-The obvious prerequistes here is that you have `python 3.X` and `pip` installed. 
-
-Assuming they are installed, to execute `cla.py` you will first need the following dependecies installed using `pip`. 
+To execute `cla.py` you will first need the following dependecies. We will use `pip` for our installer. One option is the install them individually by executing the three commands:
 
 ```
 pip install chess
