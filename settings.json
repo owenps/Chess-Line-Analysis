@@ -1,0 +1,15 @@
+{
+   "Average Ratings" : {
+       "1600" : true,
+       "1800" : true,
+       "2000" : true, 
+       "2200" : true,
+       "2500" : true
+   },
+   "Time Controls" : {
+       "bullet" : true,
+       "blitz" : true,
+       "rapid" : true,
+       "classical" : true
+   }
+}
