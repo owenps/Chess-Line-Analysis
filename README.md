@@ -33,7 +33,7 @@ Or to install them all at once, use the following command.
 ```
 pip install -r requirements.txt
 ```
-Then to run the script execute
+To then run the script, execute
 ```
 python cla.py
 ```
