@@ -4,7 +4,9 @@
 
 The Chess Line Analysis (CLA) Program is a chess tool to compare and analyze PGNs to help you make better use of your study time. The goal here is to outline particular games/lines which are statistically the most likely to happen. The CLA program is built using Python and queries the [Lichess Opening-Explorer database](https://lichess.org/api#tag/Opening-Explorer) for its statistics. 
 
-Please refer to the following sections to get a better idea of what the script does and how it works. If you are looking for something more visual, I would recommend checking out [chesstree.net](http://www.chesstree.net/).  
+Please refer to the following sections to get a better idea of what the script does and how it works. If you are looking for something more visual, I would recommend checking out [chesstree.net](http://www.chesstree.net/). 
+
+A big thank you to [u/Rumer57](https://www.reddit.com/user/rumer57) for the idea and the continuous support and feedback throughout the project's development.
 
 If you enjoy the project and wish to show your support, leaving a ⭐ on the repository would really mean a lot!
 
