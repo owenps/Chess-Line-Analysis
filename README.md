@@ -42,9 +42,9 @@ python cla.py
 
 ## FAQ
 
-> How do I only look at rapid/classical games?
+> How do I only look at rapid/classical games? <br> How do I only view games within my rating?
 
-Inside the `settings.json` file you can configure all the database settings which include time controls and ratings. Simply open the file in notepad or your favourite text editor and change the `true` values to `false` or vice versa. 
+Inside the `settings.json` file you can configure all the database settings which include time controls and ratings. Simply open the file in notepad or your favourite text editor and change whichever `true` values to `false` or vice versa. 
 
 > Does this include the Lichess masters database? 
 
@@ -52,7 +52,7 @@ No
 
 > What is `Avg Prob.` ? 
 
-`Avg Prob.` is short for average move probability. Each move in the game has an associate probability attached to it. This is simply the chance of a player (White or Black) of playing that move. So `Avg Prob.` is the sum of these probability divided by the total number of moves a particular player made. It is a metric to answer the question: "On average how popular are the moves a player made?". 
+`Avg Prob.` is short for average move probability. Each move in the game has an associate probability attached to it. This is simply the chance of a player (White or Black) playing that move. So `Avg Prob.` is the sum of these probabilities divided by the total number of moves a particular player has made. It is a metric to answer the question: "On average, how popular are the moves a player made?". 
 
 > What is `Game Prob.` ?
 
