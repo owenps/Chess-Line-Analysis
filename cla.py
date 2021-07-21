@@ -94,9 +94,9 @@ def lichess_query(fen):
 
 def cla_create():
     games = []
-    name = ""
+    ok,name = cla_load(games)
     # Fetch FENs
-    if cla_load(games,name):
+    if ok:
         # Create Table 
         cla_build(games, name)
 
@@ -179,9 +179,9 @@ def cla_show():
             print(data)
         elif ans == "7":
             games = []
-            name = ""
             # Fetch FENs
-            if cla_load(games, name):
+            ok, name = cla_load(games)
+            if ok:
                 # Create Table 
                 cla_build(games,name,new=False)
                 print(data)
@@ -191,7 +191,7 @@ def cla_show():
             break
 
 
-def cla_load(games,fn):
+def cla_load(games):
     fn = input("Enter a valid file in PGN format to load: ")
     try:
         with open(fn) as f:
@@ -200,12 +200,12 @@ def cla_load(games,fn):
                 game.board() # Check if valid, otherwise throws attribute error
                 games.append(game)
                 game = pgn.read_game(f)
-            return True
+            return True, fn
     except FileNotFoundError:
         print('The file "{}" was not found.'.format(fn))
     except AttributeError:
         print('Error reading "{}". Please submit a valid file that uses PGN format.'.format(fn))
-    return False
+    return False, None
 
 def cla_import():
     try:
