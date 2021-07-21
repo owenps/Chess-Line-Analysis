@@ -52,7 +52,7 @@ No
 
 > What is `Avg Prob.` ? 
 
-`Avg Prob.` is short for average move probability. Each move in the game has an associate probility attached to it. This is simply the chance of a player (White or Black) of playing that move. So `Avg Prob.` is the sum of these probability divided by the total number of moves a particular player made. It is a metric to answer the question: "On average how popular are the moves a player made?". 
+`Avg Prob.` is short for average move probability. Each move in the game has an associate probability attached to it. This is simply the chance of a player (White or Black) of playing that move. So `Avg Prob.` is the sum of these probability divided by the total number of moves a particular player made. It is a metric to answer the question: "On average how popular are the moves a player made?". 
 
 > What is `Game Prob.` ?
 
