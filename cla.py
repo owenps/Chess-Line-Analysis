@@ -50,8 +50,17 @@ def cla_calculate(game):
     move_prob = [[],[]]
     count = 0
     board = game.board()
+    while True:
+        try: 
+            max_moves = int(input("Set a max number of moves to analyze: "))
+            break
+        except ValueError:
+            print('Invalid max_move parameter')
+
     for i,move in enumerate(game.mainline_moves()):
         count += 1
+        if count == max_moves:
+            break
         fen = board.fen()
         info = opening_db[fen] if fen in opening_db else lichess_query(fen)
         total_games, move_total = 0, 0
@@ -186,7 +195,6 @@ def cla_load(games,fn):
     fn = input("Enter a valid file in PGN format to load: ")
     try:
         with open(fn) as f:
-            max_moves = int(input("Set a max number of moves to analyze: "))
             game = pgn.read_game(f)
             while game:
                 game.board() # Check if valid, otherwise throws attribute error
@@ -197,8 +205,6 @@ def cla_load(games,fn):
         print('The file "{}" was not found.'.format(fn))
     except AttributeError:
         print('Error reading "{}". Please submit a valid file that uses PGN format.'.format(fn))
-    except ValueError:
-        print('Invalid max_move parameter')
     return False
 
 def cla_import():
