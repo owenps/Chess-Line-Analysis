@@ -45,17 +45,11 @@ def cla_edit():
     return -1, None
     
 
-def cla_calculate(game):
+def cla_calculate(game, max_moves):
     game_prob = [1,1]
     move_prob = [[],[]]
     count = 0
     board = game.board()
-    while True:
-        try: 
-            max_moves = int(input("Set a max number of moves to analyze: "))
-            break
-        except ValueError:
-            print('Invalid max_move parameter')
 
     for i,move in enumerate(game.mainline_moves()):
         count += 1
@@ -112,11 +106,17 @@ def cla_build(games, name, new=True):
       'Avg Prob. (B)' : [],
       'PGN' : []
     }
-
+    while True:
+        max_moves = 0
+        try: 
+            max_moves = int(input("Set a max number of moves to analyze: "))
+            break
+        except ValueError:
+            print('Invalid max_move parameter')
     for num,game in enumerate(games):
         if num % 50 == 0 and num != 0:
             print("Calculating Game {}...".format(num))
-        game_score, move_score, fen, moves = cla_calculate(game)
+        game_score, move_score, fen, moves = cla_calculate(game, max_moves)
         info = opening_db[fen] if fen in opening_db else lichess_query(fen)
         d['Name'].append(name)
         d['Moves'].append(moves)
