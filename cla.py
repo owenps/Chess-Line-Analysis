@@ -2,10 +2,12 @@ import requests
 import pandas as pd
 import json
 import time
+import random
 from chess import pgn
 
 opening_db = {}
 data = None
+request_err_msg = True
 # ------------ Settings ---------------
 with open('settings.json') as f:
     settings = json.load(f)
@@ -84,9 +86,11 @@ def lichess_query(fen):
     }
     response = requests.get("https://explorer.lichess.ovh/lichess", params=query)
     if response.text[0] == "<": # too many requests
-        print("The database limits the number of requests per minute: taking a quick break.")
-        time.sleep(20)
-        print("Resuming Calculations...")
+        global request_err_msg
+        if request_err_msg:
+            print("The database limits the number of requests per minute. Calculations will take a little longer than usual.")
+            request_err_msg = False
+        time.sleep(10)
         response = requests.get("https://explorer.lichess.ovh/lichess", params=query)
 
     opening_db[fen] = response.json()
