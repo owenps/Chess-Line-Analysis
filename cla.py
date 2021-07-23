@@ -1,6 +1,7 @@
 import requests 
 import pandas as pd
 import json
+import time
 from chess import pgn
 
 opening_db = {}
@@ -82,6 +83,12 @@ def lichess_query(fen):
       'ratings[]':ratings
     }
     response = requests.get("https://explorer.lichess.ovh/lichess", params=query)
+    if response.text[0] == "<": # too many requests
+        print("The database limits the number of requests per minute: taking a quick break.")
+        time.sleep(20)
+        print("Resuming Calculations...")
+        response = requests.get("https://explorer.lichess.ovh/lichess", params=query)
+
     opening_db[fen] = response.json()
     return response.json()
 
